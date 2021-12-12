@@ -1,0 +1,80 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="card text-center">
+    <div class="card-body text-center">
+        <h3>Image Classifier</h3>
+        <div>
+            <form id="upload-file" method="post" enctype="multipart/form-data">
+                <label for="imageUpload" class="upload-label">
+                    Choose...
+                </label>
+                <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+            </form>
+
+            <div class="image-section" style="display:none;">
+                <div class="img-preview" align="center">
+                    <div id="imagePreview" align="center">
+                    </div>
+                </div>
+                <div>
+                    <button type="button" class="btn-lg " id="btn-predict">Predict!</button>
+                </div>
+            </div>
+
+            <div class="loader" style="display:none;"></div>
+
+            <h3 id="result">
+                <span> </span>
+            </h3>
+
+        </div>
+    </div>
+</div>
+<div id="team">
+    <h3 class="text-center">Our Team</h3>
+    <div class="row">
+        <div class="col">
+          <div class="card" style="width: 16rem;">
+            <div class="card-body">
+              <img class="card-img-top rounded-circle border border-dark" src="static/img/stanis.jpg" alt="Card image cap" height="16px">
+              <h4 class="card-title pt-3">Stanislaus</h4>
+              <p class="card-text">Universitas Gadjah Mada</p>
+              <p class="card-text">Jember</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 16rem;">
+            <div class="card-body">
+              <img class="card-img-top rounded-circle border border-dark" src="static/img/nicko.png" alt="Card image cap">
+              <h4 class="card-title pt-3">Nicko Andreas</h4>
+              <p class="card-text">IBI Darmajaya</p>
+              <p class="card-text">Bandar Lampung</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 16rem;">
+            <div class="card-body">
+              <img class="card-img-top rounded-circle border border-dark" src="static/img/ida.png" alt="Card image cap">
+              <h4 class="card-title pt-3">Ida Jubaidah</h4>
+              <p class="card-text">Universitas Trisakti</p>
+              <p class="card-text">Jakarta</p>
+            </div>
+          </div>  
+        </div>
+        <div class="col">
+          <div class="card" style="width: 16rem;">
+            <div class="card-body">
+              <img class="card-img-top rounded-circle border border-dark" src="static/img/aldy1.jpg" alt="Card image cap">
+              <h4 class="card-title pt-3">Aldy Nathanael</h4>
+              <p class="card-text">Politeknik Negeri Jakarta</p>
+              <p class="card-text">Jakarta</p>
+            </div>
+          </div>  
+        </div>
+      </div>
+</div>
+
+
+{% endblock %}
